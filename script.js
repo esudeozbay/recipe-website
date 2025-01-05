@@ -102,9 +102,9 @@ function addToFavorites(mealId) {
     if (!favoriteMeals.includes(mealId)) {
         favoriteMeals.push(mealId);
         localStorage.setItem('favoriteMeals', JSON.stringify(favoriteMeals));
-        alert('Added to favorites!');
+        //alert('Added to favorites!');
     } else {
-        alert('Already in favorites!');
+        //alert('Already in favorites!');
     }
 }
 
@@ -136,7 +136,7 @@ function removeFromFavorites(mealId) {
     if (index !== -1) {
         favoriteMeals.splice(index, 1);
         localStorage.setItem('favoriteMeals', JSON.stringify(favoriteMeals));
-        alert('Removed from favorites!');
+       // alert('Removed from favorites!');
         displayFavorites(); // Silindikten sonra favoriler tekrar gösteriliyor
     }
 }
