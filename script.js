@@ -102,11 +102,13 @@ function addToFavorites(mealId) {
     if (!favoriteMeals.includes(mealId)) {
         favoriteMeals.push(mealId);
         localStorage.setItem('favoriteMeals', JSON.stringify(favoriteMeals));
-        //alert('Added to favorites!');
+        // Show a user-friendly message without unnecessary text
+        alert('Added to favorites!');
     } else {
-        //alert('Already in favorites!');
+        alert('Already in favorites!');
     }
 }
+
 
 // Function to display favorites
 function displayFavorites() {
@@ -136,10 +138,12 @@ function removeFromFavorites(mealId) {
     if (index !== -1) {
         favoriteMeals.splice(index, 1);
         localStorage.setItem('favoriteMeals', JSON.stringify(favoriteMeals));
-       // alert('Removed from favorites!');
+        // Show a user-friendly message
+        alert('Removed from favorites!');
         displayFavorites(); // Silindikten sonra favoriler tekrar gösteriliyor
     }
 }
+
 
 // Event listener for popup close button
 recipeCloseBtn.addEventListener('click', () => {
